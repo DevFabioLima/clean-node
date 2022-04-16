@@ -4,7 +4,8 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "consistent-return": "warn"
   }
   
 }
