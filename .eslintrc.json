@@ -11,7 +11,8 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "import/export": "off",
     "no-restricted-syntax": "off",
-    "max-classes-per-file": "off"
+    "max-classes-per-file": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
   }
   
 }
