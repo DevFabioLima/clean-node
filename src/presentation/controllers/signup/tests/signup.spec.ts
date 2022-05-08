@@ -1,10 +1,10 @@
 /* eslint-disable no-promise-executor-return */
-import SignUpController from './signup';
-import { InvalidParamError, MissingParamError, ServerError } from '../../errors';
+import SignUpController from '../signup';
+import { InvalidParamError, MissingParamError, ServerError } from '../../../errors';
 import {
   EmailValidator, AddAccount, AddAccountModel, AccountModel, HttpRequest,
-} from './signup-protocols';
-import { ok } from '../../helpers/http-helper';
+} from '../signup-protocols';
+import { ok } from '../../../helpers/http-helper';
 
 const makeFakeRequest = (): HttpRequest => ({
   body: {
