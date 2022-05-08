@@ -1,8 +1,8 @@
 /* eslint-disable no-promise-executor-return */
-import { LogErrorRepository } from '../../data/protocols/log-error-repository';
-import { serverError } from '../../presentation/helpers/http-helper';
-import { Controller, HttpRequest, HttpResponse } from '../../presentation/protocols';
-import { LogControllerDecorator } from './log';
+import { LogErrorRepository } from '../../../data/protocols/log-error-repository';
+import { serverError } from '../../../presentation/helpers/http-helper';
+import { Controller, HttpRequest, HttpResponse } from '../../../presentation/protocols';
+import { LogControllerDecorator } from '../log';
 
 const makeController = (): Controller => {
   class ControllerStub implements Controller {
