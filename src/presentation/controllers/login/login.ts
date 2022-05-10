@@ -12,14 +12,15 @@ export class LoginController implements Controller {
   }
 
   async handle(_httpRequest: HttpRequest): Promise<HttpResponse> {
-    if (!_httpRequest.body.email) {
+    const { email, password } = _httpRequest.body;
+    if (!email) {
       return new Promise((resolve) => resolve(badRequest(new MissingParamError('email'))));
     }
-    if (!_httpRequest.body.password) {
+    if (!password) {
       return new Promise((resolve) => resolve(badRequest(new MissingParamError('password'))));
     }
 
-    const isValid = this.emailValidator.isValid(_httpRequest.body.email);
+    const isValid = this.emailValidator.isValid(email);
     if (!isValid) {
       return new Promise((resolve) => resolve(badRequest(new InvalidParamError('email'))));
     }
