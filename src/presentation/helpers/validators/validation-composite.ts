@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import { Validation } from './validation';
+import { Validation } from '../../protocols/validation';
 
 export class ValidationComposite implements Validation {
   private readonly validations: Validation[];
